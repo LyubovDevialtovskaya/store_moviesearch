@@ -1,16 +1,9 @@
 import {
-  addMovieToList,
-  clearMoviesMarkup,
-  createMarkup,
-  createStyle,
-  inputSearch,
-  movieList,
-  triggerMode
+  movieList,triggerMode,addMovieToList,clearMoviesMarkup,createMarkup,createStyle,inputSearch,
 } from './dom.js';
 
 let siteUrl = null;
 let searchLast = null;
-
 const debounce = (() => {
   let timer = 0;
 
@@ -19,7 +12,6 @@ const debounce = (() => {
       timer = setTimeout(cb, ms);
   };
 })();
-
 const getData = (url) => fetch(url)
   .then((response) => response.json())
   .then((json) => {
@@ -33,9 +25,8 @@ const inputSearchHandler = (e) => {
       const searchString = e.target.value.trim();
 
       if (searchString && searchString.lenght > 3 && searchString !== searchLast) {
-          if (!triggerMode) clearMoviesMarkup(movieList);
-
-          getData(`${siteUrl}?apikey=379c8492&s=${searchString}`)
+      if (!triggerMode) clearMoviesMarkup(movieList);
+          getData(`${siteUrl}?apikey=5be607b4=${searchString}`)
               .then((movies) => movies.forEach((movie) => addMovieToList(movie)))
               .catch((err) => console.log(err));
       }
@@ -49,7 +40,6 @@ export const appInit = (url) => {
   createMarkup();
   createStyle();
   siteUrl = url;
-
   inputSearch.addEventListener('keyup', inputSearchHandler);
 
 };

@@ -43,7 +43,7 @@ export const createStyle = () => {
       padding: 10px 15px;
       width: 400px;
       display: block;
-      border: 2px solid grey;
+      border: 2px solid red;
       border-radius: 5px;
       margin-bottom: 10px;
     }
@@ -79,7 +79,6 @@ const createElement = ({
   if (container && position === 'append') container.append(el);
   if (container && position === 'prepend') container.append(el);
   if (evt && handler) el.addEventListener(evt, handler);
-
   return el;
 };
 
@@ -93,7 +92,7 @@ export const createMarkup = () => {
 
   createElement({
     type: 'h1',
-    attrs: { innerText: 'Приложения для поиска фильмов' },
+    attrs: { innerText: 'Приложение для поиска фильмов' },
     container
   });
 
@@ -114,7 +113,7 @@ export const createMarkup = () => {
     attrs: {
       class: 'search__input',
       id: 'search',
-      placeholder: 'Начните вводить текст...',
+      placeholder: 'Начните вводить текст',
       type: 'text'
     },
     container: searchBox
