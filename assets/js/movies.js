@@ -1,4 +1,4 @@
-import {
+import{
   movieList, triggerMode, addMovieToList, clearMoviesMarkup, createMarkup, createStyle, inputSearch,
 } from './dom.js';
 
