@@ -32,7 +32,7 @@ const inputSearchHandler = (e) => {
           if (!triggerMode) clearMoviesMarkup(movieList);
 
 
-          getData(`${siteUrl}?apikey=5be607b4=${searchString}`)
+          getData(`${siteUrl}?apikey=5be607b4&s=${searchString}`)
               .then((movies) => movies.forEach((movie) => addMovieToList(movie)))
               .catch((err) => console.error(err));
       }
