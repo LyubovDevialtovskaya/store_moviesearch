@@ -26,7 +26,7 @@ const getData = (url) => fetch(url)
         return json.Search;
     });
 
-const inputSeachHandler = (e) => {
+const inputSearchHandler = (e) => {
     debounce(() => {
 
         const searchString = e.target.value.trim();
@@ -50,5 +50,5 @@ export const appInit = (url) => {
 
     siteUrl = url;
 
-    inputSearch.addEventListener('keyup', inputSeachHandler);
+    inputSearch.addEventListener('keyup', inputSearchHandler);
 };
