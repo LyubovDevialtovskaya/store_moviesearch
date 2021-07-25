@@ -43,7 +43,7 @@ export const createStyle = () => {
       padding: 10px 15px;
       width: 400px;
       display: block;
-      border: 2px solid grey;
+      border: 2px solid pink;
       border-radius: 5px;
       margin-bottom: 10px;
     }
@@ -98,7 +98,7 @@ export const createMarkup = () => {
 
     createElement({
         type: 'h1',
-        attrs: { innerText: 'Приложения для поиска фильмов' },
+        attrs: { innerText: 'Приложение для поиска фильмов' },
         container
     });
 

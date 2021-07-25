@@ -1,11 +1,5 @@
 import {
-    addMovieToList,
-    clearMoviesMarkup,
-    createMarkup,
-    createStyle,
-    inputSearch,
-    movieList,
-    triggerMode
+    addMovieToList,clearMoviesMarkup, createMarkup,createStyle,inputSearch,movieList,triggerMode
 } from './dom.js';
 
 let siteUrl = null;
@@ -38,7 +32,7 @@ const inputSearchHandler = (e) => {
             if (!triggerMode) clearMoviesMarkup(movieList);
 
 
-            getData(`${siteUrl}?apikey=379c8492&s=${searchString}`)
+            getData(`${siteUrl}?apikey=5be607b4&s=${searchString}`)
                 .then((movies) => movies.forEach((movie) => addMovieToList(movie)))
                 .catch((err) => console.error(err));
         }
