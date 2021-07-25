@@ -1,11 +1,5 @@
 import {
-  addMovieToList,
-  clearMoviesMarkup,
-  createMarkup,
-  createStyle,
-  inputSearch,
-  movieList,
-  triggerMode
+  addMovieToList,clearMoviesMarkup, createMarkup,createStyle,inputSearch,movieList,triggerMode
 } from './dom.js';
 
 let siteUrl = null;
@@ -30,7 +24,7 @@ const getData = (url) => fetch(url)
       return json.Search;
   });
 
-const inputSeachHandler = (e) => {
+const inputSearchHandler = (e) => {
   debounce(() => {
       const searchString = e.target.value.trim();
 
@@ -55,6 +49,6 @@ export const appInit = (url) => {
   createStyle();
   siteUrl = url;
 
-  inputSearch.addEventListener('keyup', inputSeachHandler);
+  inputSearch.addEventListener('keyup', inputSearchHandler);
 
 };

@@ -43,7 +43,7 @@ export const createStyle = () => {
       padding: 10px 15px;
       width: 400px;
       display: block;
-      border: 2px solid grey;
+      border: 2px solid pink;
       border-radius: 5px;
       margin-bottom: 10px;
     }
