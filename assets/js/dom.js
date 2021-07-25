@@ -98,7 +98,7 @@ export const createMarkup = () => {
 
   createElement({
     type: 'h1',
-    attrs: { innerText: 'Приложения для поиска фильмов' },
+    attrs: { innerText: 'Приложение для поиска фильмов' },
     container
   });
 
