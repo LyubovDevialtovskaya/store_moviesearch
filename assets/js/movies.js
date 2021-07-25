@@ -29,7 +29,7 @@ import {addMovieToList,clearMoviesMarkup,createMarkup, createStyle, inputSearch,
       if (searchString && searchString.length > 3 && searchString !== searchLast) {
         if (!triggerMode) clearMoviesMarkup(movieList);
   
-        getData(`${siteUrl}?s=${searchString}&apikey=5be607b4`)
+        getData(`${siteUrl}?s=${searchString}&apikey=5be607b4&s`)
           .then((movies) => movies.forEach((movie) => addMovieToList(movie)))
           .catch((err) => console.error(err));
       }
