@@ -43,7 +43,7 @@ export const createStyle = () => {
       padding: 10px 15px;
       width: 400px;
       display: block;
-      border: 2px solid red;
+      border: 2px solid grey;
       border-radius: 5px;
       margin-bottom: 10px;
     }
@@ -54,6 +54,7 @@ export const createStyle = () => {
       margin-left: 25px;
     }
   `;
+
 
   document.head.appendChild(headStyle);
 };
@@ -66,6 +67,7 @@ const createElement = ({
   evt = null,
   handler = null
 }) => {
+
   const el = document.createElement(type);
 
   for (let key in attrs) {
@@ -76,11 +78,14 @@ const createElement = ({
     }
   }
 
+
   if (container && position === 'append') container.append(el);
   if (container && position === 'prepend') container.append(el);
   if (evt && handler) el.addEventListener(evt, handler);
+
   return el;
 };
+
 
 export const createMarkup = () => {
   const container = createElement({
@@ -90,9 +95,10 @@ export const createMarkup = () => {
     position: 'prepend'
   });
 
+
   createElement({
     type: 'h1',
-    attrs: { innerText: 'Приложение для поиска фильмов' },
+    attrs: { innerText: 'Приложения для поиска фильмов' },
     container
   });
 
@@ -102,6 +108,7 @@ export const createMarkup = () => {
     container
   });
 
+  
   createElement('label', {
     class: 'search__label-input',
     for: 'search',
@@ -113,7 +120,7 @@ export const createMarkup = () => {
     attrs: {
       class: 'search__input',
       id: 'search',
-      placeholder: 'Начните вводить текст',
+      placeholder: 'Начните вводить текст...',
       type: 'text'
     },
     container: searchBox
