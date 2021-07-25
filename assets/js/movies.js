@@ -1,4 +1,10 @@
-import { addMovieToList, clearMoviesMarkup, createMarkup, createStyle, inputSearch, movieList, triggerMode } from './dom.js';
+import { addMovieToList, 
+    clearMoviesMarkup, 
+    createMarkup, 
+    createStyle, 
+    inputSearch, 
+    movieList, 
+    triggerMode } from './dom.js';
 
 let siteUrl = null;
 let searchLast = null;

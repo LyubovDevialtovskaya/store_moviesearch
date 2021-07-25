@@ -65,7 +65,7 @@ export const createStyle = () => {
         width: 400px;
         padding: 10px 15px;
         margin-bottom: 10px;
-        border: 1px solid lightsteelblue;
+        border: 1px solid pink;
         border-radius: 4px;
       }
       .search__label-checkbox {
